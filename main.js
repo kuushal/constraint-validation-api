@@ -109,10 +109,17 @@ const APP = {
     },
     validateFormOnClick(e) {
         let form = e.target;
+        let displayMessageInSpan = e.target.querySelector('#error');
 
         if (!form.checkValidity()) {
             e.preventDefault();
-            console.log("Form not submitted as there are errors");
+            displayMessageInSpan.classList.add('failure');
+            displayMessageInSpan.textContent = 'Please fill the values correctly';
+        } else {
+            e.preventDefault();
+            displayMessageInSpan.classList.add('success');
+            displayMessageInSpan.textContent = 'Form submitted successfully!';
+            form.reset();
         }
 
     }
