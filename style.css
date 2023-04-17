@@ -139,7 +139,7 @@ table {
 
 body {
     /* background-color: lightsalmon; */
-    background-color: #E84545;
+    background-color: #454545;
     font-family: monospace;
 }
 
@@ -153,11 +153,12 @@ main {
 form {
     display: flex;
     flex-direction: column;
+
 }
 
 label {
     font-size: 2.5rem;
-    color: rgb(74, 64, 64);
+    color: #FFE6C7;
 }
 
 input {
@@ -172,12 +173,20 @@ input {
     color: rgb(74, 64, 64);
 }
 
+input:invalid {
+    border: 3px solid red;
+}
+
+input:valid {
+    border: 3px solid green;
+}
+
 button {
     border: none;
     padding: 1rem 1.5rem;
     border-radius: 10px;
     margin-top: 2rem;
-    background-color: #2B2E4A;
+    background-color: #FF6000;
     color: white;
     font-size: 2.3rem;
     cursor: pointer;
